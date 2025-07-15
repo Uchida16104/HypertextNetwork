@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.post('/result.js', (req, res) => {
+app.post('/result', (req, res) => {
     const ip_address = req.body.ip_address;
 
     const whois_url = `http://ip-api.com/json/${ip_address}`;
