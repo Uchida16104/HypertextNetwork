@@ -16,7 +16,11 @@ RUN npm install -g typescript @neos21/in-browser-sass
 WORKDIR /var/www/html
 
 COPY . /var/www/html/
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
 
 EXPOSE 80
 
-CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+
+CMD ["/start.sh"]
+
