@@ -19,7 +19,7 @@ COPY . /var/www/html/
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
 
-EXPOSE 80
+EXPOSE 80 3000
 
 
 CMD ["/start.sh"]
